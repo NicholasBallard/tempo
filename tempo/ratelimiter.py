@@ -16,7 +16,7 @@ class RateLimiter:
         self.rate_limit = rate_limit
         self.tokens_queue = asyncio.Queue(rate_limit)
         self.tokens_consumer_task = asyncio.create_task(self.consume_tokens())
-        self.semaphore = asyncio.Semaphore(concurrency_limit)
+        self.semaphore = asyncio.BoundedSemaphore(concurrency_limit)
 
     async def add_token(self) -> None:
         await self.tokens_queue.put(1)
