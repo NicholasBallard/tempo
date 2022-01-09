@@ -103,4 +103,5 @@ Open an issue, create a branch, and submit a PR. (Tests for everything!)
 - Handle streaming responses.
 - CLI
 - Documentation page. Also, good docstrings.
+- Test coverage tracking.
 - …
