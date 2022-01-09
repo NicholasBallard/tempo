@@ -1,3 +1,5 @@
+from functools import wraps
+from typing import Any, Callable
 import asyncio
 import math
 import time
@@ -11,7 +13,8 @@ class RateLimiter:
         if not rate_limit or rate_limit < 1:
             raise ValueError('rate limit must be non zero positive number')
         if not concurrency_limit or concurrency_limit < 1:
-            raise ValueError('concurrent limit must be non zero positive number')
+            raise ValueError(
+                'concurrent limit must be non zero positive number')
 
         self.rate_limit = rate_limit
         self.tokens_queue = asyncio.Queue(rate_limit)
@@ -57,7 +60,8 @@ class RateLimiter:
     @staticmethod
     def get_tokens_amount_to_consume(consumption_rate, current_consumption_time, last_consumption_time, total_tokens):
         time_from_last_consumption = current_consumption_time - last_consumption_time
-        calculated_tokens_to_consume = math.floor(time_from_last_consumption / consumption_rate)
+        calculated_tokens_to_consume = math.floor(
+            time_from_last_consumption / consumption_rate)
         tokens_to_consume = min(total_tokens, calculated_tokens_to_consume)
         return tokens_to_consume
 

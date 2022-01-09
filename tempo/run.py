@@ -1,8 +1,3 @@
-from pydantic import (
-    AnyHttpUrl,
-    BaseModel,
-    validator,
-)
 import asyncio
 from functools import partial, wraps
 from typing import (
@@ -14,6 +9,11 @@ from typing import (
 
 import httpx
 import nest_asyncio
+from pydantic import (
+    AnyHttpUrl,
+    BaseModel,
+    validator,
+)
 nest_asyncio.apply()
 
 from .ratelimiter import RateLimiter
@@ -63,8 +63,6 @@ async def run(
         return await client.request(**config.dict())
 
     # TODO handle collection
-    def handle_collection(res):
-        ...
     
     # TODO yield res
     
