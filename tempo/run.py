@@ -1,22 +1,26 @@
 import asyncio
-from functools import partial, wraps
+from functools import (
+    partial,
+    wraps
+)
 from typing import (
     Awaitable,
     Callable,
     Coroutine,
-    Iterable,
+    Iterable
 )
 
 import httpx
-import nest_asyncio
 from pydantic import (
     AnyHttpUrl,
     BaseModel,
-    validator,
+    validator
 )
-nest_asyncio.apply()
 
 from .ratelimiter import RateLimiter
+
+import nest_asyncio  # isort:skip
+nest_asyncio.apply()
 
 
 class RequestConfig(BaseModel):
@@ -63,9 +67,9 @@ async def run(
         return await client.request(**config.dict())
 
     # TODO handle collection
-    
+
     # TODO yield res
-    
+
     # TODO return grouped results option
 
     def process(res):

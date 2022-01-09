@@ -4,7 +4,7 @@ import pytest
 
 from tempo.run import (
     RequestConfig,
-    run,
+    run
 )
 
 

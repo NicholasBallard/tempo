@@ -1,9 +1,12 @@
-from functools import wraps
-from typing import Any, Callable
 import asyncio
 import math
 import time
 from contextlib import asynccontextmanager
+from functools import wraps
+from typing import (
+    Any,
+    Callable
+)
 
 
 class RateLimiter:
