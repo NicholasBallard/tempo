@@ -1,10 +1,9 @@
 import pytest
-import nest_asyncio
+
+import nest_asyncio # isort:skip
 nest_asyncio.apply()
 
-from tempo.ratelimiter import (
-    RateLimiter,
-)
+from tempo.ratelimiter import RateLimiter
 from tempo.run import RequestConfig
 
 
