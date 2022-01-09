@@ -1,8 +1,26 @@
 [tool.poetry]
 name = "tempo-async"
 version = "0.1.0"
-description = ""
+description = "An HTTP package for metering and managing async requests."
+license = "Apache-2.0"
 authors = ["Nicholas Ballard <nicholasericballard@gmail.com>"]
+maintainers = ["Nicholas Ballard <nicholasericballard@gmail.com>"]
+readme = "README.md"
+homepage = "https://github.com/NicholasBallard/tempo"
+repository = "https://github.com/NicholasBallard/tempo"
+documentation = ""
+keywords = "async, asynchronous, requests, HTTP, meter"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Framework :: AsyncIO",
+    "Topic :: Internet",
+    "Topic :: Internet :: WWW/HTTP :: Site Management :: Link Checking",
+    "Topic :: Utilities",
+]
+packages = [
+    { include = "tempo"},
+]
+include = ["CHANGELOG.md"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
