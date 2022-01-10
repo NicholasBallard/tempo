@@ -42,3 +42,6 @@ jobs:
         with:
           # files or directories to sort
           sortPaths: .
+      
+      - name: Setup Poetry
+        uses: Gr1N/setup-poetry@v7
