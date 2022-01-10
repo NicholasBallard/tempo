@@ -9,7 +9,13 @@ readme = "README.md"
 homepage = "https://github.com/NicholasBallard/tempo"
 repository = "https://github.com/NicholasBallard/tempo"
 documentation = ""
-keywords = "async, asynchronous, requests, HTTP, meter"
+keywords = [
+    "async",
+    "asynchronous",
+    "requests",
+    "HTTP",
+    "meter",
+]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Framework :: AsyncIO",
@@ -26,9 +32,10 @@ include = ["CHANGELOG.md"]
 python = "^3.10"
 httpx = "^0.21.1"
 click = "^8.0.3"
+nest-asyncio = "^1.5.4"
+pydantic = "^1.9.0"
 
 [tool.poetry.dev-dependencies]
-nest-asyncio = "^1.5.4"
 pytest-asyncio = "^0.16.0"
 ipykernel = "^6.6.0"
 requests = "^2.26.0"
