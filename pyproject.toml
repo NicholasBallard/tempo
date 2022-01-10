@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tempo-async"
-version = "0.1.0"
+version = "0.1.1"
 description = "An HTTP package for metering and managing async requests."
 license = "Apache-2.0"
 authors = ["Nicholas Ballard <nicholasericballard@gmail.com>"]
