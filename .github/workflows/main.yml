@@ -48,7 +48,8 @@ jobs:
 
       - name: pytester-cov
         uses: alexanderdamiani/pytester-cov@v1.2.1
-        cov-threshold-single: 90
-        cov-threshold-total: 95
-        pytest-root-dir: tempo
-        pytest-tests-dir: tests
+        with: 
+          cov-threshold-single: 90
+          cov-threshold-total: 95
+          pytest-root-dir: tempo
+          pytest-tests-dir: tests
