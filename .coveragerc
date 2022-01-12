@@ -1,0 +1,9 @@
+[run]
+cov_fail_under = 90
+
+[report]
+show_missing = True
+exclude_lines = 
+        ^\s*if __name__ == ['"]__main__['"]:$
+        ^\s*raise$
+

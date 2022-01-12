@@ -45,3 +45,10 @@ jobs:
       
       - name: Setup Poetry
         uses: Gr1N/setup-poetry@v7
+
+      - name: pytester-cov
+        uses: alexanderdamiani/pytester-cov@v1.2.1
+        cov-threshold-single: 90
+        cov-threshold-total: 95
+        pytest-root-dir: tempo
+        pytest-tests-dir: tests
