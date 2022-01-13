@@ -53,3 +53,6 @@ jobs:
           cov-threshold-total: 95
           pytest-root-dir: tempo
           pytest-tests-dir: tests
+      
+      - name: coverage.py badge
+        uses: tj-actions/coverage-badge-py@v1.6
