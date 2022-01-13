@@ -1,8 +1,6 @@
 # Tempo
 
-[![Coverage Status](./reports/coverage/coverage-badge.svg?dummy=8484744)](./reports/coverage/cov_html/index.html)  
-
-[![Tests](./reports/coverage/tests-badge.svg?dummy=8484744)](./reports/coverage/cov_html/index.html) 
+[![Coverage Status](./reports/coverage/coverage-badge.svg?dummy=8484744)](./reports/coverage/cov_html/index.html)  [![Tests](./reports/coverage/tests-badge.svg?dummy=8484744)](./reports/coverage/cov_html/index.html) 
 
 *Asynchronous wrapper for HTTP requests.*
 
