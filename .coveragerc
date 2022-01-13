@@ -1,0 +1,7 @@
+[report]
+
+[html]
+directory = reports/coverage/cov_html
+
+[xml]
+output = reports/coverage/coverage.xml

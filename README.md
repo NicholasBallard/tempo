@@ -1,5 +1,9 @@
 # Tempo
 
+[![Coverage Status](./reports/coverage/coverage-badge.svg?dummy=8484744)](./reports/coverage/cov_html/index.html)  
+
+[![Tests](./reports/coverage/tests-badge.svg?dummy=8484744)](./reports/coverage/cov_html/index.html) 
+
 *Asynchronous wrapper for HTTP requests.*
 
 ## Installation
@@ -62,7 +66,7 @@ requests = [ # map in any request parameters: url, query params, HTTP method, et
 def say_hi(res) -> None:
   # returns None so does not affect final processed response sent to collectors
   print('Hello cat!')
- 
+
 def get_body(res) -> str:
   # since it returns a value, this processor changes the final output of `tempo.run`
   body = res.text
