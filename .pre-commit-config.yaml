@@ -1,0 +1,35 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+fail_fast: true
+repos:
+  # - repo: https://github.com/pre-commit/pre-commit-hooks
+  #   rev: v3.2.0
+  #   hooks:
+  #     - id: trailing-whitespace
+  #     - id: end-of-file-fixer
+  #     - id: check-yaml
+  #     - id: check-added-large-files
+  # - repo: local
+  #   hooks:
+  #     - id: create requirements
+  #       name: create requirements
+  #       entry: sh scripts/write_requirements.sh
+  #       language: system
+  #       always_run: true
+  #       pass_filenames: false
+  - repo: local
+    hooks:
+      - id: create README coverage badge
+        name: create README coverage badge
+        entry: poetry run genbadge coverage -o reports/coverage/coverage-badge.svg
+        language: system
+        always_run: true
+        pass_filenames: false
+  - repo: local
+    hooks:
+      - id: create README tests badge
+        name: create README tests badge
+        entry: poetry run genbadge tests -o reports/coverage/tests-badge.svg
+        language: system
+        always_run: true
+        pass_filenames: false
