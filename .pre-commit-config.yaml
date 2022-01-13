@@ -19,6 +19,14 @@ repos:
   #       pass_filenames: false
   - repo: local
     hooks:
+      - id: run pytest coverage
+        name: run pytest coverage
+        entry: bash scripts/run_pytest.sh
+        language: system
+        always_run: true
+        pass_filenames: false
+  - repo: local
+    hooks:
       - id: create README coverage badge
         name: create README coverage badge
         entry: poetry run genbadge coverage -o reports/coverage/coverage-badge.svg
